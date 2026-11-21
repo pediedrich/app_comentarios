@@ -1,0 +1,51 @@
+ejecucion del plan:
+
+lo primero que me pidio antes de iniciar fue el stack  base para construir el MVP
+
+seleccione:
+PHP - MySQL/MariaDB - Vanilla HTML/CSS/JS
+
+verifico la version del php instalado.-
+
+chequeo los dirvers de PDO instalado
+
+verifico mysql 
+
+solicito permiso de lectura sobre archivos que estan por fuera del espacio de trabajo como
+mysql_start.bat
+
+verifico el estado del msyql y lo inicio por que estaba detenido
+
+comenzo con la creacion de los archivos
+
+respuestas del agente:
+
+´´´´
+creo La base de la aplicación; 
+ahora añadiré una prueba de integración mínima que valide creación, respuestas, orden, 
+límites y moderación contra MySQL.
+
+Las pruebas locales pasan y el servidor responde; haré una última comprobación HTTP de creación y moderación antes de cerrar el informe de ejecución.
+
+´´´´
+
+al probar la app desde el localhost:8081
+*lo primero que vizualiza es un titulo un label un input y un boton.
+*no se ve css implementado
+*al revisar la herramienta de desarrollador de google veo que el sytle.css y app.js dan error 404
+
+al insertar un comentario:
+*me controlo a nivel de frontend el envio de campo vacio
+*no puedo agregar mas de 500 caractares
+*agrege 1 espacio y me guardo el comentario vacio
+
+///// YO
+al ingresar al localhost:8081 me aparece la opcion de agregar comentarios pero me da error 404 en style.css y app.js.
+
+///// IA
+El problema es el mapeo: el HTML busca /styles.css y /app.js, pero esos archivos están dentro de public/. Ajustaré el enrutador para esos dos recursos y reiniciaré PHP usando index.php como router.
+
+*una vez correjido ingraso nuevamente al localhost:8081 y se visualiza de manera diferente ya con el estilo anuncaido en el desing.md
+*tambien se puede ver que muestra la cantidad de caracteres que se va ingresando.-
+*se guarda correctamente y se muestra el mensaje guardado en una columna central tal como dice el spec
+*se puede ver que el control de texto vacio lo hace desde el back.-

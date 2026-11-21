@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Comentarios MVP</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <main>
+    <h1>Comentarios</h1>
+
+    <form id="comment-form">
+      <label for="comment-text">Nuevo comentario</label>
+      <textarea id="comment-text" maxlength="500" required></textarea>
+      <small id="character-count">0 / 500</small>
+      <button type="submit">Publicar</button>
+    </form>
+
+    <section id="comments" aria-live="polite"></section>
+  </main>
+
+  <template id="comment-template">
+    <article class="comment">
+      <p class="comment-text"></p>
+      <time></time>
+      <button type="button" class="reply-button">Responder</button>
+      <div class="replies"></div>
+    </article>
+  </template>
+
+  <script src="/app.js"></script>
+</body>
+</html>
