@@ -15,6 +15,30 @@ Plataforma de comentarios que permite la interacción entre usuarios registrados
 * **RN-009:** Una respuesta siempre pertenece a un comentario.
 * **RN-010:** El administrador puede banear a un usuario desde un panel de administración simple, por el mal uso de la plataforma o comportamientos inadecuados.
 
+## 3. Features
+* **F-001:** Comentarios y Respuestas Anónimas (Contraste con RN-008)
+
+Permite a los usuarios publicar comentarios sin necesidad de iniciar sesión, seleccionando la opción "Publicar como Anónimo" y asignando un identificador temporal generado por el sistema (ej. Usuario Anónimo #4821).
+
+* **F-002:** Ordenamiento Dinámico y Popularidad (Contraste con RN-002)
+
+Añade un selector de ordenamiento para que los usuarios puedan alternar entre vista cronológica, comentarios más votados (Top / Trending) y discusiones más activas, en lugar de mostrar exclusivamente los más recientes primero.
+
+* **F-003:** Edición y Eliminación Sin Límite de Tiempo (Contraste con RN-006)
+
+Otorga libertad total a los usuarios para editar o eliminar sus propios comentarios en cualquier momento posterior a su publicación, manteniendo un historial de versiones visibles públicamente si el comentario ha sido editado.
+
+* **F-004:** Anidación Múltiple / Hilos Profundos (Contraste con RN-005)
+
+Habilita múltiples niveles de respuestas encadenadas (sub-respuestas ilimitadas o con un límite configurable de hasta 5 niveles) para permitir debates en árbol estructurados, en lugar de un único nivel de respuesta.
+
+* **F-005:** Formato Enriquecido y Contenido Multimedia (Contraste con RN-003 / MOD-001)
+
+Permite el uso de formato Markdown básico en el campo de texto (negritas, cursivas, listas) y la inserción de imágenes o GIFs embebidos, ampliando el límite de caracteres más allá de los 500 iniciales.
+
+* **F-006:** Auto-gestión y Suspensión Temporal (Contraste con RN-010 y MOD-004)
+
+Introduce un sistema de sanciones progresivas automatizadas (advertencias previas y bloqueos temporales automáticos por 24 o 48 horas) gestionadas por la IA antes de aplicar un baneo permanente manual por parte del administrador.
 ## 3. Moderación y Seguridad (MOD)
 * **MOD-001:** Antes de insertar un comentario o respuesta en la base de datos, el backend debe enviar el texto a un microservicio/API de lenguaje de IA para analizar palabras prohibidas y enlaces sospechosos (Phishing/Malware).
 * **MOD-002:** Los usuarios pueden reportar comentarios específicos o perfiles de otros usuarios por mala conducta que infrinjan las normas comunitarias.
